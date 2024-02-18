@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonLike from "./ButtonLike";
 
 const PostList = ({ posts, generictitle }) => {
   return (
@@ -9,12 +10,15 @@ const PostList = ({ posts, generictitle }) => {
 
       {posts.map((post) => (
         <div className="post-preview" key={post.id}>
-          <div className="border-2">
+          <div className=" p-8">
             <h2 className="text-xl font-bold">{post.title}</h2>
             <p>{post.body}</p>
-            <h6>{post.userId}</h6>
+            <h6>Written by user n. {post.userId}</h6>
             <h5 className="mx-10">{post.tags}, </h5>
-            <h6>{post.reactions}</h6>
+            <h6>
+              {post.reactions} reactions
+              <ButtonLike />
+            </h6>
           </div>
         </div>
       ))}
