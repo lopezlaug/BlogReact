@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div className="home mt-10">
-      {posts && <PostList posts={posts} generictitle="all posts!!" />}
+      {posts && <PostList posts={posts} generictitle="All posts" />}
     </div>
   );
 };
